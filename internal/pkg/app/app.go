@@ -1,7 +1,15 @@
 package app
 
-type App struct{}
+import "github.com/iktkhor/user-subscriptions-api/internal/app/handler"
+
+type App struct {
+	h *handler.Handler
+}
 
 func New() *App {
-	return &App{}
+	handler := handler.New()
+
+	return &App{
+		h: handler,
+	}
 }
