@@ -2,7 +2,7 @@ package handler
 
 import "net/http"
 
-func Router() http.Handler {
+func (h *Handler) Router() http.Handler {
 	router := http.NewServeMux()
 
 	return router
